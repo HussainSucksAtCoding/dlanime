@@ -1,4 +1,4 @@
-# Dlanime
+# dlanime
 download anime torrents from nyaa.si using shell script. 
 # Requirements
 Aria2c: for installing torrents.\
