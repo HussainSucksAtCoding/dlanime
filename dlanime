@@ -1,0 +1,8 @@
+#!/bin/bash
+
+anime=$(printf '%s' "$*" | tr ' ' '+')
+result=$(curl -s "https://nyaa.si/?f=0&c=0_1&q=$anime&s=seeders&o=desc" | grep -Po '<a href="/view/[0-9]*" title=".*?"' | cut -d '"' -f 4 | fzf | tr ' ' '+')
+download=$(curl -g "https://nyaa.si/?f=0&c=0_0&q=$result" | grep -Po 'magnet:\?xt=urn:btih:[a-zA-Z0-9]*.*?">' | cut -d '"' -f 1)
+
+aria2c  $download
+
