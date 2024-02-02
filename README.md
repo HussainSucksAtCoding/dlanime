@@ -1,7 +1,7 @@
-# dlanime
-Download anime torrents from nyaa.si. 
-# requirements
-aria2c: for installing torrents.\
-fzf: to search for the desired result.
-# usage
+# Dlanime
+download anime torrents from nyaa.si using shell script. 
+# Requirements
+Aria2c: for installing torrents.\
+FZF(fuzzy finder): to search for the desired result.
+# Usage
 dlanime [Anime name]
